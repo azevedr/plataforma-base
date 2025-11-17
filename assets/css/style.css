@@ -1,0 +1,75 @@
+/* Paleta de cores */
+:root {
+    --roxo: #6A4CFF;
+    --roxo-escuro: #4B2FCF;
+    --roxo-menu: #2D1E6B;
+    --lilas: #EDE7FF;
+    --cinza: #F5F5F5;
+    --texto: #333;
+    --branco: #fff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cinza);
+    color: var(--texto);
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background: var(--roxo);
+    padding: 15px;
+    color: var(--branco);
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background: var(--roxo-menu);
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background: var(--roxo-escuro);
+}
+
+/* Conteúdo */
+.content {
+    padding: 30px;
+    width: 100%;
+}
