@@ -1,13 +1,15 @@
 /* Paleta de cores */
+
 :root {
-    --roxo: #6A4CFF;
-    --roxo-escuro: #4B2FCF;
-    --roxo-menu: #2D1E6B;
-    --lilas: #EDE7FF;
+    --roxo: #8A2BE2;
+    --roxo-escuro: #6A1BB9;
+    --roxo-menu: #4B0082;
+    --lilas: #EAD9FF;
     --cinza: #F5F5F5;
     --texto: #333;
     --branco: #fff;
 }
+
 
 /* Reset básico */
 * {
