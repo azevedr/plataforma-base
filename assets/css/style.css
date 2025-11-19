@@ -115,5 +115,6 @@ body {
 
 .main-wrapper {
     max-width: 1400px;
-    margin: auto;
+    margin: 0 auto 0 0; /* alinha tudo da mesma forma */
 }
+
