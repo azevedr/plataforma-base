@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
 </head>
 <body>
     
@@ -28,11 +30,46 @@
         </nav>
         <div class="main-wrapper">
         <main class="content">
-            <h2>Cadastro de Profissionais</h2>
-            <p>Lista e gerenciamento de profissionais do estúdio.</p>
-        </main>
+    <h2>Profissionais</h2>
+
+    <a href="./cadastrar-profissional.html" class="btn btn-primary">+ Adicionar Profissional</a>
+
+    <div id="lista-profissionais"></div>
+
+</main>
+
+<script type="module">
+    import { Table } from "../assets/js/components/table.js";
+
+    const columns = [
+        { label: "Nome", field: "nome" },
+        { label: "Especialidade", field: "especialidade" },
+        { label: "Telefone", field: "telefone" }
+    ];
+
+    const data = [
+        {
+            nome: "Ana Souza",
+            especialidade: "Pilates Solo",
+            telefone: "(11) 99999-0000"
+        },
+        {
+            nome: "Marcos Lima",
+            especialidade: "Pilates Reformer",
+            telefone: "(11) 98888-2222"
+        }
+    ];
+
+    const tabela = Table({ columns, data });
+
+    document.getElementById("lista-profissionais").appendChild(tabela);
+</script>
+
+
         </div>
     </div>
+<script src="../assets/js/sidebar-active.js"></script>
+
 
 </body>
 </html>

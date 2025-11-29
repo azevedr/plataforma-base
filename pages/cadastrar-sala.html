@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Sala</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <h1 class="logo">Minha Plataforma</h1>
+</header>
+
+<div class="container">
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="./salas.html">Voltar</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-wrapper">
+    <main class="content">
+
+        <h2>Cadastrar Sala</h2>
+         <div class="form-wrapper">
+        <form id="form-sala">
+
+            <div class="input-group">
+                <label>Nome da Sala</label>
+                <input type="text" id="nomeSala" placeholder="Ex: Sala Solo, Sala Reformer, Studio 1">
+            </div>
+
+            <div class="input-group">
+                <label>Capacidade</label>
+                <input type="text" id="capacidadeSala" placeholder="Ex: 1 pessoa, 2 pessoas">
+            </div>
+
+            <div class="input-group">
+                <label>Tipo</label>
+                <input type="text" id="tipoSala" placeholder="Ex: Pilates Solo, Pilates Reformer">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Salvar</button>
+            <button class="btn btn-secondary" type="reset">Limpar</button>
+
+        </form>
+        </div>
+    </main>
+    </div>
+
+</div>
+<script src="../assets/js/sidebar-active.js"></script>
+
+</body>
+</html>
