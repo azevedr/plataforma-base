@@ -1,0 +1,405 @@
+/* -------------------------
+   BOTÕES — SISTEMA PADRÃO
+-------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border: none;
+    text-decoration: none;
+}
+
+/* Botão principal */
+.btn-primary {
+    background: var(--roxo);
+    color: var(--branco);
+    box-shadow: 0 3px 8px rgba(138, 43, 226, 0.25);
+}
+
+.btn-primary:hover {
+    background: var(--roxo-escuro);
+}
+
+/* Botão secundário */
+.btn-secondary {
+    background: var(--lilas);
+    color: var(--roxo-menu);
+    border: 1px solid #d5bfff;
+}
+
+.btn-secondary:hover {
+    background: #e9d8ff;
+}
+
+/* Botão de perigo */
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b02a37;
+}
+
+/* Botão pequeno */
+.btn-small {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+
+/* Botão muito leve (opcional em futuras telas) */
+.btn-light {
+    background: #f5f5f5;
+    color: #555;
+}
+
+.btn-light:hover {
+    background: #e4e4e4;
+}
+
+/* -------------------------
+   INPUTS
+-------------------------- */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--roxo);
+    box-shadow: 0 0 3px rgba(138, 43, 226, 0.4);
+}
+
+
+/* -------------------------
+   CARD DE LISTA
+-------------------------- */
+
+.table-card {
+    background: var(--branco);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    margin-top: 30px;
+    width: 100%;
+}
+
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-card th, .table-card td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.table-card th {
+    font-weight: 600;
+    color: var(--roxo-menu);
+}
+
+
+/* -------------------------
+   MODAL
+-------------------------- */
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.modal-close {
+    text-align: right;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* -------------------------
+   TABELA COMPONENT
+-------------------------- */
+
+.table-component {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 25px;
+}
+
+.table-component th {
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+    color: var(--roxo-menu);
+    background: #f8f1ff;
+    border-bottom: 1px solid #eae0f7;
+}
+
+.table-component td {
+    padding: 12px 16px;
+    color: #444;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.table-component tr:hover td {
+    background: #faf4ff;
+}
+
+/* -------------------------
+   AGENDA
+-------------------------- */
+
+.agenda-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+/* Calendário lateral */
+.agenda-calendar {
+    width: 250px;
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+.agenda-date {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.calendar-box {
+    height: 250px;
+    background: #faf7ff;
+    border: 1px dashed #d5c7ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Grade principal */
+.agenda-grid {
+    flex: 1;
+    min-width: 600px;
+}
+
+.agenda-header {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr 1fr;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    color: var(--roxo-menu);
+}
+
+.agenda-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.agenda-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr 1fr;
+    background: var(--branco);
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.agenda-row .hora {
+    font-weight: 600;
+    color: var(--roxo-menu);
+}
+
+.agenda-row .slot {
+    height: 30px;
+    border: 1px dashed #d9d2ff;
+    border-radius: 6px;
+    background: #faf7ff;
+}
+
+.agenda-row .slot:hover {
+    background: #f1e7ff;
+    cursor: pointer;
+}
+
+/* -------------------------
+   MODAL
+-------------------------- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-box {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    width: 380px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: modalIn 0.2s ease;
+}
+
+.modal-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: var(--roxo-menu);
+}
+
+.modal-box p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+@keyframes modalIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* -------------------------
+   FORM WRAPPER
+-------------------------- */
+
+.form-wrapper {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 25px;
+}
+
+.form-wrapper h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--roxo-menu);
+    font-weight: 600;
+}
+
+.form-wrapper p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--roxo);
+    box-shadow: 0 0 3px rgba(138, 43, 226, 0.4);
+}
+
+.form-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* -----------------------------------
+   MINI CARDS — AULAS NA AGENDA
+----------------------------------- */
+
+.aula-card {
+    background: var(--roxo);
+    color: white;
+    font-size: 0.75rem;
+    padding: 6px 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.aula-card .aluno {
+    font-weight: 600;
+}
+
+.aula-card .prof {
+    font-size: 0.7rem;
+    opacity: 0.9;
+}
+
+.aula-card .sala {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}

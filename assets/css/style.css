@@ -78,9 +78,17 @@ body {
     background-color: var(--roxo-escuro);
 }
 
+/* item ativo na sidebar */
+.sidebar ul li a.active {
+    background: var(--roxo-escuro);
+    border-left: 4px solid var(--lilas);
+    padding-left: 35px;
+}
+
+
 /* Conteúdo */
 .content {
-    padding: 50px 60px;
+    padding: 40px 60px;
     width: 100%;
 }
 
@@ -92,6 +100,7 @@ body {
 .content p {
     font-size: 1rem;
     color: #444;
+    margin-bottom: 25px;
 }
 
 /* Cards */

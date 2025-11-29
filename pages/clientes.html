@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
 </head>
 <body>
     
@@ -27,13 +29,48 @@
             </ul>
         </nav>
         <div class="main-wrapper">
-        <main class="content">
-           <h2>Cadastro de Clientes</h2>
-           <p>Lista e gerenciamento de alunos/clientes do estúdio.</p>
+       <main class="content">
+    <h2>Clientes</h2>
 
-        </main>
+    <a href="./cadastrar-cliente.html" class="btn btn-primary">+ Adicionar Cliente</a>
+
+    <div id="lista-clientes"></div>
+</main>
+
         </div>
     </div>
+
+<script type="module">
+    import { Table } from "../assets/js/components/table.js";
+
+    const columns = [
+        { label: "Nome", field: "nome" },
+        { label: "Telefone", field: "telefone" },
+        { label: "E-mail", field: "email" },
+        { label: "Objetivo", field: "objetivo" }
+    ];
+
+    const data = [
+        {
+            nome: "Carla Mendes",
+            telefone: "(11) 91234-5678",
+            email: "carla@gmail.com",
+            objetivo: "Emagrecimento"
+        },
+        {
+            nome: "João Ribeiro",
+            telefone: "(11) 99887-1122",
+            email: "joao@gmail.com",
+            objetivo: "Reabilitação"
+        }
+    ];
+
+    const tabela = Table({ columns, data });
+
+    document.getElementById("lista-clientes")
+        .appendChild(tabela);
+</script>
+<script src="../assets/js/sidebar-active.js"></script>
 
 </body>
 </html>

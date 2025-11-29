@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="../assets/css/components.css">
+
 
 </head>
 <body>
@@ -30,12 +32,105 @@
 
         <div class="main-wrapper">
         <main class="content">
-            <h2>Agenda</h2>
-            <p>Visualização das aulas e horários disponíveis.</p>
-        
-        </main>
+
+    <h2>Agenda</h2>
+    <p>Visualização das aulas e horários disponíveis.</p>
+
+    <div class="agenda-container">
+
+        <!-- Calendário lateral -->
+        <aside class="agenda-calendar">
+            <h3>Calendário</h3>
+            <p class="agenda-date">Selecione uma data</p>
+
+            <div class="calendar-box">
+                <!-- Mini calendário estático por enquanto -->
+                <p style="color:#666;">(Calendário será funcional no Sprint 2)</p>
+            </div>
+        </aside>
+
+        <!-- Grade de horários / salas -->
+        <section class="agenda-grid">
+
+            <div class="agenda-header">
+                <span>Horário</span>
+                <span>Sala 1</span>
+                <span>Sala 2</span>
+                <span>Sala Reformer</span>
+            </div>
+
+            <div class="agenda-rows" id="agendaRows">
+                <!-- Horários serão gerados via script -->
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
         </div>
     </div>
+
+    <script>
+    const agendaRows = document.getElementById("agendaRows");
+
+    const horarios = [
+        "07:00", "08:00", "09:00", "10:00",
+        "11:00", "12:00", "13:00", "14:00",
+        "15:00", "16:00", "17:00", "18:00",
+        "19:00", "20:00", "21:00", "22:00"
+    ];
+
+    horarios.forEach(hora => {
+        const row = document.createElement("div");
+        row.classList.add("agenda-row");
+
+        row.innerHTML = `
+            <span class="hora">${hora}</span>
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+        `;
+
+        agendaRows.appendChild(row);
+    });
+
+    // ========================
+    // MINI CARDS (exemplo Sprint 1)
+    // ========================
+
+    const slots = document.querySelectorAll(".slot");
+
+    // 08:00 - Aula Sala 1
+    slots[1].innerHTML = `
+        <div class="aula-card">
+            <span class="aluno">Carla M.</span>
+            <span class="prof">Ana Souza</span>
+            <span class="sala">Sala 1</span>
+        </div>
+    `;
+
+    // 10:00 - Sala 2
+    slots[7].innerHTML = `
+        <div class="aula-card">
+            <span class="aluno">João R.</span>
+            <span class="prof">Marcos L.</span>
+            <span class="sala">Sala 2</span>
+        </div>
+    `;
+
+    // 18:00 - Sala Reformer
+    slots[32].innerHTML = `
+        <div class="aula-card">
+            <span class="aluno">Beatriz S.</span>
+            <span class="prof">Ana Souza</span>
+            <span class="sala">Reformer</span>
+        </div>
+    `;
+</script>
+
+<script src="../assets/js/sidebar-active.js"></script>
 
 </body>
 </html>
